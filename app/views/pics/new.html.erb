@@ -4,6 +4,9 @@
 
 	<%= simple_form_for @pic do |f| %>
 		<%= f.input :hour, :label => 'Which Hour', :placeholder => 'Enter the Hour'   %>
+		
+		<%= f.input :image, :as => :file %> 
+
 		<%= f.input :emotion, :label => 'How did you feel?', :placeholder => 'Happy, Stoked, Awesome, Angry' %>
 		<%= f.input :learned, :label => 'What did you learn?', :placeholder => 'CSS3, HTML5, Rails, Ruby, Console, Terminal, Heroku, Github, Postgres', :input_html => {rows: '3'} %>
 
