@@ -8,62 +8,59 @@
 </head>
 <body>
 
-  <div class="navbar navbar-inverse">
-   <div class="navbar-inner">
+<div class="navbar navbar-inverse">
+  <div class="navbar-inner">
     <div class="container">
-     
-    <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-    </a>
-     
-    <!-- Be sure to leave the brand out there if you want it shown -->
-    <%= link_to 'Firehose', root_path, :class => 'brand' %>
+         
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        </a>
+         
+        <!-- Be sure to leave the brand out there if you want it shown -->
+        <%= link_to 'Firehose', root_path, :class => 'brand' %>
 
-    <!-- Everything you want hidden at 940px or less, place within here -->
-    <div class="nav-collapse collapse">
-    <!-- .nav, .navbar-search, .navbar-form, etc -->
-    	<ul class="nav">
-    		<li>
-	    	<%= link_to 'My App', pics_path %>
-	    	</li>
-        <li>
-        <%= link_to 'New Pic', new_pic_path %>
-        </li>
+        <!-- Everything you want hidden at 940px or less, place within here -->
+        <div class="nav-collapse collapse">
+        <!-- .nav, .navbar-search, .navbar-form, etc -->
+          	<ul class="nav">
+          		<li>
+      	    	<%= link_to 'My App', pics_path %>
+      	    	</li>
+              <li>
+              <%= link_to 'New Pic', new_pic_path %>
+              </li>
 
-	    </ul>
+      	    </ul>
 
-      <ul class="nav pull-right">
+            <ul class="nav pull-right">
 
-        <% if user_signed_in? %>
-        <li>
-            <%= link_to current_user.email, '#' %>
-        </li>
+              <% if user_signed_in? %>
+              <li>
+                  <%= link_to current_user.email, '#' %>
+              </li>
 
-        <li>
-          <%= link_to 'Sign Out', destroy_user_session_path, :method => 'delete' %>
-        </li>
+              <li>
+                <%= link_to 'Sign Out', destroy_user_session_path, :method => 'delete' %>
+              </li>
 
-        <% else %>
+              <% else %>
 
-        <li>
-          <%= link_to 'Sign Up', new_user_registration_path %>
-        </li>
+              <li>
+                <%= link_to 'Sign Up', new_user_registration_path %>
+              </li>
 
-        <li>
-          <%= link_to 'Sign In', new_user_session_path %>
-        </li>
+              <li>
+                <%= link_to 'Sign In', new_user_session_path %>
+              </li>
 
-        <% end %>
-
-      </ul>
-
-    </div>
-     
-    </div>
-   </div>
+              <% end %>
+            </ul>
+          </div>  
+        </div>
+     </div>
   </div>
 
 
